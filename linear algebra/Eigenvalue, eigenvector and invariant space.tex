@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,setspace}
+
+\textwidth 7.0 truein
+\oddsidemargin -0.25in   %left-hand edge
+\evensidemargin -0.5 truein  %right-hand edge
+\topmargin -0.85in      %top of paper to top of head, pulls whole unit
+\textheight 9.5in
+
+%%%% In most cases you won't need to edit anything above this line %%%%
+
+\begin{document}
+\hfill Name 
+
+\hfill Math 2270
+
+\hfill Assignment \#
+
+
+\begin{itemize}
+\item[1)] Suppose $T \in \mathcal{L}(V)$ and $U$ is a subspace of $V$.
+\begin{itemize}
+    \item Prove that if $U \subset \text{null } T$, then $U$ is invariant under $T$.
+    \item Prove that if $\text{range } T \subset U$, then $U$ is invariant under $T$.
+\end{itemize}
+
+\underline{Solution}
+
+For any $\vec{x}\in U$, then $\vec{x}\in\text{null } T$, then $T(\vec{x})=\vec{0}\in U$, so $U$ is invariant under $T$.
+
+For any $\vec{x}\in U$, then $T(\vec{x})\in\text{range } T$, so $T(\vec{x})\in U$.
+
+\item[2)] Suppose $S,T \in \mathcal{L}(V)$ are such that $ST = TS$. Prove that $\text{null } S$ is invariant under $T$.
+
+\underline{Solution}
+
+For any $\vec{x}\in \text{null } S$, $S(\vec{x})=\vec{0}$, so $S(T(\vec{x}))=T(S(\vec{x}))=T(\vec{0})=\vec{0}$, so $T(\vec{x})\in \text{null } S$.
+
+\item[3)] Suppose $S,T \in \mathcal{L}(V)$ are such that $ST = TS$. Prove that $\text{range } S$ is invariant under $T$.
+
+\underline{Solution}
+
+For any $\vec{x}\in V$, $S(\vec{x})\in\text{range } S$ and $T(\vec{x})\in V$, then $T(S(\vec{x}))=S(T(\vec{x}))\in\text{range } S$.
+
+\item[4)] Suppose $T \in \mathcal{L}(V)$ and $U_1,\dots,U_m$ are subspaces of $V$ invariant under $T$. Prove that $U_1+\cdots+U_m$ is invariant under $T$.
+
+\underline{Solution}
+
+For $\vec{x}\in U_1+\cdots+U_m$, we could write $\vec{x}=\vec{x_1}+\cdots +\vec{x_m}$ where $\vec{x_1}\in U_1,\dots,\vec{x_m}\in U_m$.
+
+Then $T(\vec{x_1})\in U_1,\dots,T(\vec{x_m})\in U_m$, so $T(\vec{x})=T(\vec{x_1}+\cdots +\vec{x_m})=T(\vec{x_1})+\cdots +T(\vec{x_m})\in U_1+\cdots+U_m$.
+
+\item[5)] Suppose $T \in \mathcal{L}(V)$. Prove that the intersection of every collection of subspaces of $V$ invariant under $T$ is invariant under $T$.
+
+\underline{Solution}
+
+\end{itemize}
+
+
+\end{document}
