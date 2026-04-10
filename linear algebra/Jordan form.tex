@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,setspace}
+
+\textwidth 7.0 truein
+\oddsidemargin -0.25in   %left-hand edge
+\evensidemargin -0.5 truein  %right-hand edge
+\topmargin -0.85in      %top of paper to top of head, pulls whole unit
+\textheight 9.5in
+
+%%%% In most cases you won't need to edit anything above this line %%%%
+
+\begin{document}
+\hfill Name 
+
+\hfill Math 2270
+
+\hfill Assignment \#
+
+
+\begin{itemize}
+
+\item [1)] Consider the block diagonal matrix
+\[
+A=\begin{bmatrix}
+    A_{11}&0\\
+    0&A_{22}
+\end{bmatrix},\quad A_{ii}\in M_{n_i}
+\]
+Show that the eigenvalues of $A$ are those of $A_{11}$ together with those of $A_{22}$.
+
+\underline{Solution}
+
+Let $\vec{x}$ be an eigenvector of $A$, we could write $\vec{x}=\vec{x_1}+\vec{x_2}$ where $\vec{x_1}\in\mathbb{R}^{n_1}$ and $\vec{x_2}\in\mathbb{R}^{n_2}$.
+\[
+A\vec{x}=\begin{bmatrix}
+    A_{11}&0\\0&A_{22}
+\end{bmatrix}\begin{bmatrix}
+    \vec{x_1}\\\vec{x_2}
+\end{bmatrix}=\begin{bmatrix}
+    A_{11}\vec{x_1}\\A_{22}\vec{x_2}
+\end{bmatrix}=\begin{bmatrix}
+    \lambda_1\vec{x_1}\\\lambda_2\vec{x_2}
+\end{bmatrix}
+\]
+Then $A_{11}\vec{x_1}=\lambda_1\vec{x_1}$ and $A_{22}\vec{x_2}=\lambda_2\vec{x_2}$, so $\vec{x_1}$ and $\vec{x_2}$ are eigenvectors of $A_{11}$ and $A_{22}$.
+If $\vec{x_1}=\vec{0}$, then the eigenvalue is from $A_{11}$; if $\vec{x_2}=\vec{0}$, then the eigenvalue is from $A_{22}$; if $\vec{x_1},\vec{x_2}$ are both non-zero, then $\lambda_1=\lambda_2$, so it won't matter for the conclusion.
+
+
+
+
+\item [2)] Let the $2\times 2$ matrix $A$ have an eigenvalue $\lambda$ of algebraic multiplicity 2 and geometric multiplicity 1. Let $\mathbf{v}_1$ be an eigenvector corresponding to $\lambda$. Then there exists a vector $\mathbf{v}_2$ that satisfies the equation
+\[
+(A-\lambda I)\mathbf{v}_2=\mathbf{v}_1
+\]
+
+\underline{Solution}
+
+Extend $\mathbf{v}_1$ to a linear independent set $\{\mathbf{v}_1,\mathbf{w}\}$. 
+
+Let $A\mathbf{w}=a\mathbf{v}_1+b\textbf{w}$, so the matrix $A$ is:
+\[
+A=\begin{pmatrix}
+    \lambda&a\\
+    0& b
+\end{pmatrix}
+\]
+Because the algebraic multiplicity is 2, so the characteristic polynomial for $A$ must be $(t-\lambda)^2$. From the matrix, we could calculate $\chi(t)=(t-\lambda)(t-b)=(t-\lambda)^2$, and so $b=\lambda$. 
+
+Let $\mathbf{v}_2=\frac{1}{c_1}\mathbf{w}$, and we will have a vector that satisfies the question. 
+
+\end{itemize}
+
+\end{document}

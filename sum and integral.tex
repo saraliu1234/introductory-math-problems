@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,setspace}
+\usepackage{appendix}
+
+\textwidth 7.0 truein
+\oddsidemargin -0.25in   %left-hand edge
+\evensidemargin -0.5 truein  %right-hand edge
+\topmargin -0.85in      %top of paper to top of head, pulls whole unit
+\textheight 9.5in
+
+%%%% In most cases you won't need to edit anything above this line %%%%
+
+\begin{document}
+\hfill Name 
+
+\hfill Math 2270
+
+\hfill Assignment \#
+
+\begin{itemize}
+\item[1)] Question one text
+
+Solution
+
+\item[2)] Determine the value of the improper integral
+\[
+\int_0^{\infty}\frac{x}{e^x-1}dx
+\]
+
+\[
+\int_0^{\infty}\frac{x}{e^x-1}dx
+=\int_0^{\infty}x\sum_{n=1}^{\infty}e^{-nx}dx=\sum_{n=1}^{\infty}\int_0^{\infty}xe^{-nx}dx
+\]
+\[
+\int_0^{\infty}xe^{-nx}dx=\frac{1}{n^2}\int_0^{\infty}xe^{-x}dx=\frac{1}{n^2}\Gamma(2)=\frac{1}{n^2}
+\]
+\[
+\sum_{n=1}^{\infty}\int_0^{\infty}xe^{-nx}dx=\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}
+\]
+
+
+\item[3)]
+
+\end{itemize}
+
+\newpage
+\appendix
+\section{Extend for 2}
+Show that the improper integral is convergent:
+\[
+\int_0^{\infty}\frac{x}{e^x-1}dx
+\]
+
+\[
+\int_1^{\infty}\frac{x}{e^x-1}dx=
+\lim_{a\rightarrow \infty}\int_1^a\frac{x}{e^x-1}dx<\lim_{a\rightarrow \infty}\int_1^a \frac{1}{x^2}dx
+\]
+We know that $e^x-1-x\geq 0$ for all $x$, so $\frac{x}{e^x-1}\leq 1$.
+\[
+\int_0^1\frac{x}{e^x-1}dx=
+\lim_{b^+\rightarrow 0}\int_b^1\frac{x}{e^x-1}dx<\lim_{b^+\rightarrow 0}\int_b^1 1dx=1
+\]
+
+\end{document}
