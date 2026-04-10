@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsthm,amssymb,amsfonts,setspace}
+
+\textwidth 7.0 truein
+\oddsidemargin -0.25in   %left-hand edge
+\evensidemargin -0.5 truein  %right-hand edge
+\topmargin -0.85in      %top of paper to top of head, pulls whole unit
+\textheight 9.5in
+
+%%%% In most cases you won't need to edit anything above this line %%%%
+
+\begin{document}
+\hfill Name 
+
+\hfill Math 2270
+
+\hfill Assignment \#
+
+Let $\mathbf{V}=\mathbf{W}_1\oplus\mathbf{W}_2\oplus\cdots\oplus\mathbf{W}_k$, and let $\mathbf{v}=\mathbf{v}_1+\mathbf{v}_2+\cdots+\mathbf{v}_k$ denote the decomposition of each $\mathbf{v}\in\mathbf{V}$ with $\mathbf{v}_i\in\mathbf{W}_i$. For $i=1,2,\dots,k$, let $P_i$ be defined by 
+\[
+P_i(\mathbf{v}_1+\mathbf{v}_2+\cdots+\mathbf{v}_k)=\mathbf{v}_i
+\]
+The complete set of projections $\{P_1,P_2,\dots,P_k\}$ has the following properties:
+\begin{itemize}
+\item $P_i$ is a nonzero projection
+    \item $P_iP_j=Z$ whenever $i\neq j$
+    \item $P_1+P_2+\cdots +P_k=1$
+\end{itemize}
+
+\begin{itemize}
+
+\item [1)] If $T$ is an idempotent linear operator on $\mathbf{V}$, then $T$ is the projection of $\mathbf{V}$ onto $T(\mathbf{V})$ along $T^{-1}(\mathbf{0})$.
+
+\underline{Solution}
+
+Let $\mathbf{u}\in T(\mathbf{V})$ for some $\mathbf{v}\in \mathbf{V}$. Then
+\[
+T(\mathbf{u})=T^2(\mathbf{v})=T(\mathbf{v})=\mathbf{u}
+\]
+that is $T$ acts as identity transformation on $T(\mathbf{V})$.
+
+For any $\mathbf{v}\in T(\mathbf{V})\cap T^{-1}(\mathbf{0})$, then $\mathbf{v}=T(\mathbf{v})=\mathbf{0}$, so $T(\mathbf{V})+T^{-1}(\mathbf{0})$ is direct.
+
+Let $\mathbf{v}$ be an arbitrary vector, and let $\mathbf{v}_1=T(\mathbf{v}),\mathbf{v}_2=(1-T)\mathbf{v}$. Then $T(\mathbf{v}_2)=(T-T^2)\mathbf{v}_2=0\mathbf{v}_2=\mathbf{0}$, so $\mathbf{v_2}\in T^{-1}(\mathbf{0})$.
+\[
+\mathbf{v}=T(\mathbf{v})+(1-T)\mathbf{v}=\mathbf{v}_1+\mathbf{v}_2,
+\]
+we have $\mathbf{V}= T(\mathbf{V})\oplus T^{-1}(\mathbf{0})$, and $T$ is a projection of $\mathbf{V}$ onto $T(\mathbf{V})$ along $T^{-1}(\mathbf{0})$.
+
+\end{itemize}
+
+\end{document}
